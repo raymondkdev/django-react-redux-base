@@ -157,14 +157,6 @@ Backend (django/python static analysis)
 
 * `$ ./scripts/static_validate_backend.sh`
 
-## Deployment in Production
-
-We deploy all our production code using Kubernetes. Explaining how to do deployments is beyond the scope of this boilerplate. 
-
-Here's a great article from digital ocean on how to deploy django project in a VM: https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-16-04 
-
-
-
 ## Screenshots
 
 Here are some screenshots of the boilerplate project.
@@ -184,15 +176,3 @@ Here are some screenshots of the boilerplate project.
 * The development server takes longer than the django server to start, as it has to install the javascript dependencies (if not already installed) and fire webpack. This means that after the django server starts, you should wait that webpack finishes compiling the .js files.
 * If your IDE has builtin language support for python with auto-imports (e.g. PyCharm), you can create a virtualenv and install the py-requirements.
 * If you are annoyed by docker creating files belonging to root (which is Docker's intended behaviour), you can run `# chown -hR $(whoami) .` before firing up the server.
-
-
-## Contributing
-
-We welcome contributions from the community, given that they respect these basic guidelines:
-
-* All Tests & Static Analysis passing;
-* 100% code coverage;
-
-Prior to any pull-request, we advise to [open an issue](https://github.com/Seedstars/django-react-redux-base/issues). This is because, although we are happy to merge your code, we must make sure the changes don't impact our way of doing things, thus resulting on a declined PR, and your time wasted.
-
-If you want to tackle any open issue, well..... Just go for it! :)
